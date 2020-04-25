@@ -26,10 +26,13 @@ def plot_xy(
     if save_fig:
         if path:
             plt.savefig(os.path.join(path, "Graphs", title))
+            plt.close()
         else:
             plt.savefig(os.path.join("Graphs", title))
+            plt.close()
     else:
         plt.show()
+    plt.close(fig="all")
 
 
 def plot_duo(Series, labels, xlabel, ylabel, title, save_fig=False, path=None):
@@ -65,10 +68,13 @@ def plot_duo(Series, labels, xlabel, ylabel, title, save_fig=False, path=None):
     if save_fig:
         if path:
             plt.savefig(os.path.join(path, "Graphs", title))
+            plt.close()
         else:
             plt.savefig(os.path.join("Graphs", title))
+            plt.close()
     else:
         plt.show()
+    plt.close(fig="all")
 
 
 def plot_multiple(Series, labels, xlabel, ylabel, title, save_fig=False, path=None):
@@ -105,3 +111,4 @@ def plot_multiple(Series, labels, xlabel, ylabel, title, save_fig=False, path=No
             plt.savefig(os.path.join("Graphs", title))
     else:
         plt.show()
+    plt.close(fig="all")
